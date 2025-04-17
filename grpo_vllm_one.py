@@ -1,3 +1,5 @@
+#实际执行 GRPO (Group Reward Policy Optimization) 训练过程的主程序。它负责管理正在被训练的策略模型 (policy model)。
+# 它使用 VLLM (Vectorized Language Model) 库来生成文本，并使用 DeepSpeed 库来加速训练过程。
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import json, os, shutil, re, random, io, requests, ctypes, sys, time, struct
 import torch
@@ -8,7 +10,7 @@ import torch.multiprocessing as mp
 from tqdm import tqdm
 os.environ['TOKENIZERS_PARALLELISM'] = 'true'
 
-model_path = "/data2/Qwen/Qwen2.5-7B"
+model_path = "/data1/hao/models/FILM-7B/"
 gen_device = 4    # GPU device for generation, don't put it in CUDA_VISIBLE_DEVICES
 beta = 0.04
 all_steps = 1000
