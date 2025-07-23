@@ -8,6 +8,7 @@ We make the simplest codebase to support:
 - "Aha moment" is observed during the early stages of model training.
 
 ## ✨NEW
+- **2025/07/23: 🚀 Check out [LSRL](https://github.com/lsdefine/lsrl) - Our next-generation RL framework with custom optimizer and streamlined architecture for better performance!**
 - 2025/02/19: Added a loss triton implementation, which has a little speedup, but you can choose not to use it. See *simple_grpo_v1* fold
 - 2025/02/19: Added regroup version, implemented sampling of generated data on ref_server. See *regroup_ver* fold
 - 2025/02/27: Added vllm package to accelerate the inference.
