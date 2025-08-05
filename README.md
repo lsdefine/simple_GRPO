@@ -43,6 +43,8 @@ pip install datasets
 This package is only used for simply loading GSM8K. 
 For real usage, users should prepare their own data, so datasets is not a strict requirement.
 
+**BTW**：if datasets is not installed and you do not load dataset in file, the generate process has no data, so the training process (as well as ref process) is always **waiting for batch**.
+
 ## Usage
 ### Now, if you have three GPUs or more, you will have a better choice!!!
 Run the following command:
