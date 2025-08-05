@@ -35,6 +35,13 @@ pip install -r requirements.txt
 ```
 At least two GPUs are needed.
 
+**Warning:** 
+You may need to install datasets and add a http proxy (maybe) to run the example script that simply use gsm8k. 
+``` bash
+pip install datasets
+```
+This package is only used for simple testing with GSM8K. For real usage, users should prepare their own data, so datasets is not a strict requirement.
+
 ## Usage
 ### Now, if you have three GPUs or more, you will have a better choice!!!
 Run the following command:
