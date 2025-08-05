@@ -1,4 +1,4 @@
-
+# 运行一个固定的参考模型 (reference model)，并提供一个网络服务来计算由当前训练模型生成的序列的对数概率 (log probabilities)
 import json, os, shutil, re, random, io, time
 import torch
 
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     import bottle, threading, queue
     os.environ['TOKENIZERS_PARALLELISM'] = 'true'
 
-    model_path = "/data2/Qwen/Qwen2.5-7B"
+    model_path = "/data1/hao/models/FILM-7B/"
 
     ref_model = AutoModelForCausalLM.from_pretrained(model_path,
             torch_dtype=torch.bfloat16, _attn_implementation="sdpa").to('cuda')
